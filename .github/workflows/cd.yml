@@ -11,26 +11,24 @@ jobs:
     - name: Create a GitHub release
       uses: ncipollo/release-action@v1
       with:
-        tag: 1.0.1
-        name: Release 1.0.1
-        body: 1.0.1
-
-  echo:
-    runs-on: ubuntu-latest
-    needs: release
-    steps:
-    - uses: actions/checkout@v2
-    - run: |
+        tag: 1.0.2
+        name: Release 1.0.2
+        body: 1.0.2
+    - name: Find all meta files
+      run: |
         echo "Assets/Scenes.meta" > metaList
         find Assets/Scenes/ -name \*.meta >> metaList
-
-    - run: mkdir a
-
-    - uses: pCYSl5EDgo/create-unitypackage@master
+    - name: Make directory for our unity package
+      run: mkdir a
+    - name: Create Unity Package
+      uses: pCYSl5EDgo/create-unitypackage@master
       with:
-        package-path: 'a/output.unitypackage'
+        package-path: 'a/DemoPackage.unitypackage'
         include-files: metaList
-    - uses: actions/upload-artifact@master
+    - uses: xresloader/upload-to-github-release@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
-        path: a
-        name: package
+        file: 'a/DemoPackage.unitypackage'
+        tags: true
+        draft: true
