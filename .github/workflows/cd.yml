@@ -11,9 +11,9 @@ jobs:
     - name: Create a GitHub release
       uses: ncipollo/release-action@v1
       with:
-        tag: 1.0.2
-        name: Release 1.0.2
-        body: 1.0.2
+        tag: 1.0.3
+        name: Release 1.0.3
+        body: 1.0.3
     - name: Find all meta files
       run: |
         echo "Assets/Scenes.meta" > metaList
