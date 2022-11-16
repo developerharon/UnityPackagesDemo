@@ -1,0 +1,22 @@
+{
+  "name": "com.developerharon.haron",
+  "version": "1.1.0",
+  "displayName": "Haron Package Example",
+  "description": "This is an example package created by developerharon",
+  "unity": "2021.3",
+  "unityRelease": "11f1",
+  "documentationUrl": "https://developerharon.substack.com/",
+  "changelogUrl": "https://developerharon.substack.com/",
+  "licensesUrl": "https://developerharon.substack.com/",
+  "dependencies": { },
+ "keywords": [
+    "demo",
+    "test",
+    "package"
+  ],
+  "author": {
+    "name": "Developer Haron",
+    "email": "ronoharonkip@gmail.com",
+    "url": "https://developerharon.substack.com/"
+  }
+}
