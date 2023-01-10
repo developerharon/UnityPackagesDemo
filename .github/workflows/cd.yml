@@ -25,6 +25,6 @@ jobs:
         repo_token: ${{ secrets.GITHUB_TOKEN }}
         file: a/DemoPackage.unitypackage
         asset_name: DemoPackage.unitypackage
-        tag: 1.0.5
+        tag: 1.0.6
         overwrite: true
         body: "This is my release text"
